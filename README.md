@@ -88,6 +88,9 @@ AgriSense AI leverages a state-sharing multi-agent graph where specialized agent
 ### AgriSense Dashboard Overview
 ![AgriSense Dashboard Overview](screenshots/dashboard.png)
 
+### 🎥 Working Demo Walkthrough
+![AgriSense OS Walkthrough Demo](screenshots/project_demo.webp)
+
 ---
 
 ## 🚀 Setup & Installation
