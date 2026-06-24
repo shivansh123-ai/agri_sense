@@ -54,13 +54,39 @@ AgriSense AI leverages a state-sharing multi-agent graph where specialized agent
 
 ## ✨ Features
 
-- **Dynamic Collaborative Chat**: Enter a single query and watch the agents collaborate in real-time. Click on any active agent node to inspect its specific JSON intelligence reports.
-- **Crop Advisor**: Uses regional history and soil profile inputs to recommend optimal crops, expected yields, and soil enrichment guidelines.
-- **Field Scanner (Gemini Vision)**: Analyze images of diseased crop leaves in real-time to detect pathogens, treatment steps, and preventive measures.
-- **Weather Specialist**: Suggests safe pesticide spraying windows and irrigation plans based on local wind speeds and moisture forecasts.
-- **Market Intelligence**: An interactive dashboard showing APMC Mandi rates and historical stock-like charts to recommend whether to Sell or Hold inventory.
-- **Govt Scheme Advisor**: Scans government schemes (like PMFBY, KCC, and PM-KISAN) matching your context, translating complex applications into regional languages (Hindi, Telugu, Punjabi, Marathi).
-- **Interactive Planner**: A synchronized local checklist of daily, weekly, and monthly tasks automatically updated by the agent team.
+### 1. Merged AI Chat & Disease Scanner UI
+- Unified the standalone Leaf Scanner page natively inside the **AI Chat & Scanner** console.
+- Farmers can upload leaf photos directly in the chat window via file upload or quick-test samples (e.g. Tomato Blight, Potato Leaf) to run **Gemini Vision pathology diagnosis**.
+- Returns a beautifully structured diagnosis card displaying the disease name, confidence score, pathogen causes, prescribed organic/chemical treatments, and long-term prevention rules.
+- Fully integrated with the multi-agent execution pipeline.
+
+### 2. Location-Aware Dynamic Weather Forecasts
+- Weather advisories automatically adjust based on the selected region/state and season.
+- Custom logic divides 11 Indian agricultural states into regional climatic zones (North, Central/East, West, South) to output distinct weather guidance, temperature bounds, rain advisories, and spraying windows.
+- The weather card renders dynamic CSS micro-animations: falling raindrops for the **Kharif** monsoon season, and a spinning, glowing sun with wind lines for **Rabi/Zaid** seasons.
+
+### 3. Localized Translation Controls
+- Added multi-lingual dashboard translations supporting **Hindi, Punjabi, Marathi, Telugu, and English**.
+- **Intuitive UX Separation**: The main farm configuration panel, parameter inputs, state selectors, and the top navigation header always remain in English to avoid form inputs overlapping or deforming.
+- All recommendations, strategy cards, today's actions, and government policies below the parameter form translate instantly into the selected regional language.
+
+### 4. Smart Geolocation Mapping
+- Includes a **Detect Location** button utilizing the browser's Geolocation API.
+- Automatically maps coordinates (Latitude/Longitude ranges) to the closest supported Indian agricultural state (e.g. mapping southern coordinates to Tamil Nadu or Karnataka, eastern to Bihar, etc.) and auto-selects it in the Region dropdown.
+
+### 5. Persistent Farm Strategy Caching
+- Prevents database clearing/overwriting on page transitions.
+- Farm configurations (Region, Soil, Season, Language) and compiled agent reports are cached client-side in `localStorage`, maintaining state seamlessly when transitioning between pages.
+
+---
+
+## 📸 Screenshots & Working Demo
+
+### English Configuration Panel & Hindi Recommendations
+![AgriSense English Configuration with Hindi Recommendations](screenshots/hindi_dashboard.png)
+
+### AgriSense Dashboard Overview
+![AgriSense Dashboard Overview](screenshots/dashboard.png)
 
 ---
 
