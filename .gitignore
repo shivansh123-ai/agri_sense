@@ -1,0 +1,40 @@
+# Node & Next.js build files
+node_modules/
+.next/
+out/
+build/
+.pnp
+.pnp.js
+
+# Python cache & build files
+__pycache__/
+*.py[cod]
+*$py.class
+.ipynb_checkpoints
+.venv/
+env/
+venv/
+ENV/
+
+# Database files
+agrisense.db
+agrisense.db-journal
+
+# Environments / Credentials (CRITICAL: Never commit keys)
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+*.env
+
+# IDE / Editor logs and settings
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.DS_Store
+.gemini/
